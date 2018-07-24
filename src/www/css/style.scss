@@ -1,0 +1,74 @@
+*{
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: "Roboto","游ゴシック体", "Yu Gothic", YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.contents{
+  color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+  .current-step{
+    height: 80%;
+  }
+  .step-bg:not(.current-step){
+    height: 10%;
+  }
+  .stepA-bg{
+    background-color: rgba(27,94,32 ,1);
+  }
+  .stepB-bg{
+    background-color: rgba(46,125,50 ,1)
+  }
+  .stepC-bg{
+    background-color: rgba(56,142,60 ,1);
+  }
+  .step-bg{
+    width: 100%;
+    transition: height 1s ease-in-out;
+    .step{
+      width: 50%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      .label{
+        padding-top: 12px;
+        font-size: 32px;
+        text-align: center;
+      }
+      .selection{
+        padding: 18px 9px;
+        font-size: 24px;
+        line-height: 1.1em;
+
+      }
+      .selectable{
+        overflow: auto;
+        margin-top: 24px;
+        height: 85%;
+        line-height: 1.2em;
+        li{
+          padding: 12px 24px;
+          border-bottom: thin solid whitesmoke;
+        }
+        li:first-of-type{
+          border-top: thin solid whitesmoke;
+        }
+      }
+      .selection:not(.selectable), .selecting {
+        display: none;
+      }
+      .selected ~ .selecting{
+        display: block;
+      }
+
+      .selecting{
+        margin-top: 10px;
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+  }
+
+}
