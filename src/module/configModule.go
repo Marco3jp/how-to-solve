@@ -29,7 +29,7 @@ func (self ConfigModule) GetConfig() *[]byte {
 		panic(err)
 	}
 
-	row = self.DB.QueryRow("select main , main_dark , main_light , sub,sub_dark,sub_light from config_color where color_id = ?", colorId)
+	row = self.DB.QueryRow("select main , main_dark , main_light , sub,sub_dark,sub_light,font from config_color where color_id = ?", colorId)
 	err = row.Scan(
 		&config.Color.Main,
 		&config.Color.MainDark,
@@ -37,6 +37,7 @@ func (self ConfigModule) GetConfig() *[]byte {
 		&config.Color.Sub,
 		&config.Color.SubDark,
 		&config.Color.SubLight,
+		&config.Color.Font,
 	)
 
 	if err != nil{

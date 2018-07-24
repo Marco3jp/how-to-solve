@@ -9,6 +9,7 @@ type Config struct {
 		Sub       string `json:"sub"`
 		SubDark   string `json:"sub_dark"`
 		SubLight  string `json:"sub_light"`
+		Font      string `json:"font"`
 	} `json:"color"`
 	Label struct {
 		PointA string `json:"pointA"`
