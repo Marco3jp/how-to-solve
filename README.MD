@@ -11,7 +11,7 @@
 - /config
 - /genreList
 - /todoList?genreId=XXX
-- /todoSolution?todoId=XXX
+- /solution?todoId=XXX
 
 ## データベース
 ### config

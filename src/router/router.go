@@ -19,7 +19,7 @@ func Init(db *sql.DB) *mux.Router {
 
 	r.HandleFunc("/todoList", controller.TodoListController{baseController}.GetTodoList).Methods("GET")
 
-	r.HandleFunc("/todoSolution", controller.SolutionController{baseController}.GetSolution).Methods("GET")
+	r.HandleFunc("/solution", controller.SolutionController{baseController}.GetSolution).Methods("GET")
 
 	return r
 }
