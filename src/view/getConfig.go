@@ -6,6 +6,7 @@ import (
 )
 
 func GetConfig(configJson *[]byte,w http.ResponseWriter)  {
+	w.Header().Set("Access-Control-Allow-Origin", "http://localhost")
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 
