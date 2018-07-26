@@ -8,3 +8,5 @@ let todoEndpoint = "/todoList";
 let solutionEndpoint = "/solution";
 
 let pointerEvent = window.ontouchstart === null ? "touchstart" : "click";
+
+let step = 1;
