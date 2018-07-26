@@ -1,4 +1,4 @@
-let host = "http://localhost";
+let host = "https://marco.plus";
 let port = "9250";
 let apiPrefix = "/api";
 
