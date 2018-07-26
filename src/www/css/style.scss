@@ -12,6 +12,7 @@
   color: whitesmoke;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   .current-step{
     height: 80%;
   }
@@ -29,7 +30,7 @@
   }
   .step-bg{
     width: 100%;
-    transition: height 1s ease-in-out;
+    transition: height 0.75s ease-in-out;
     .step{
       width: 50%;
       height: 100%;
@@ -45,7 +46,6 @@
         padding: 18px 9px;
         font-size: 24px;
         line-height: 1.1em;
-
       }
       .selectable{
         overflow: auto;
@@ -66,11 +66,94 @@
       .selected ~ .selecting{
         display: block;
       }
-
       .selecting{
         margin-top: 10px;
         font-size: 28px;
         text-align: center;
+      }
+      .solution{
+        overflow: auto;
+        height: 90%;
+
+        li{
+          list-style: none;
+        }
+
+        .description{
+          position: relative;
+          margin-top: 24px;
+          background: rgba(56,142,60 ,1);
+          padding: 30px calc(24px + 4em) 24px 24px;
+          line-height: 1.5em;
+          white-space: pre-wrap;
+          .description-wrapper{
+            margin-left: 4em;
+          }
+        }
+
+        .description:before{
+          position: absolute;
+          top: 12px;
+          content: '解説';
+        }
+
+        .samples{
+          li{
+            background: rgba(56,142,60 ,1);
+            margin-top: 24px;
+            padding: 12px 24px;
+          }
+
+          .sample-code-wrapper{
+            position: relative;
+            margin-left: 4em;
+            padding-top: 24px;
+            code{
+              white-space: pre-wrap;
+              color: rgba(236,239,241 ,1);
+              font-family: 'Source Code Pro','Roboto',sans-serif;
+            }
+          }
+
+          .sample-code-wrapper:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: 'Example Code';
+            margin-left: -4em;
+          }
+
+          .sample-link-wrapper{
+            position: relative;
+            margin-left: 4em;
+            padding-top: 24px;
+          }
+
+          .sample-link-wrapper:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: 'Example Link';
+            margin-left: -4em;
+          }
+        }
+
+        .links{
+          position: relative;
+          background: rgba(56,142,60 ,1);
+          margin-top: 24px;
+          padding: 30px 24px 12px 24px;
+          line-height: 1.1em;
+          li{
+            margin-left: 4em;
+          }
+        }
+
+        .links:before{
+          top: 12px;
+          position: absolute;
+          content: 'Links';
+        }
       }
     }
   }
