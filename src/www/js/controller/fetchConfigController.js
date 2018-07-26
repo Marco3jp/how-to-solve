@@ -1,7 +1,7 @@
-class configFetchController {
+class fetchConfigController {
     constructor(){
         FetchConfigModule.getConfig();
     }
 }
 
-let FetchConfigController = new configFetchController();
+let FetchConfigController = new fetchConfigController();
