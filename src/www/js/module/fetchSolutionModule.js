@@ -4,7 +4,8 @@ class fetchSolutionModule {
         fetch(host+":"+port+apiPrefix+solutionEndpoint+"?todoId="+this.dataset.todoId).then(function (response) {
             return response.json();
         }).then(function (solution) {
-            console.log(solution);
+            SolutionView.displayAll(solution);
+            StepModule.forward();
         })
     }
 }
