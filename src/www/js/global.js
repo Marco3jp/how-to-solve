@@ -5,4 +5,4 @@ let apiPrefix = "/api";
 let configEndpoint = "/config";
 let genreEndpoint = "/genreList";
 let todoEndpoint = "/todoList";
-let solutionEnpoint = "/solution";
+let solutionEndpoint = "/solution";
