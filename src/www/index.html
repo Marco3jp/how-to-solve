@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/html5reset-1.6.1.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     </head>
     <body>
         <div class="loading">
@@ -14,64 +15,62 @@
             </div>
         </div>
         <div class="contents hidden">
-            <div class="step-bg stepA-bg">
+            <div class="current-step step-bg stepA-bg">
                 <div class="step stepA">
                     <div class="label labelA">
-                        testA
                     </div>
-                    <ul class="selected selection selectionA">
-                        <li>AAAAA1</li>
-                        <li>AAAAA2</li>
-                        <li>AAAAA3</li>
+                    <ul class="selectable selection selectionA">
                     </ul>
-                    <div class="selecting">AAAAA2</div>
+                    <div class="selecting selectingA"></div>
                 </div>
             </div>
 
-            <div class="current-step step-bg stepB-bg">
+            <div class="step-bg stepB-bg">
                 <div class="step stepB">
                     <div class="label labelB">
-                        testB
                     </div>
-                    <ul class="selectable selection selectionB">
-                        <li>BBBBB1</li>
-                        <li>BBBBB2</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
-                        <li>BBBBB3</li>
+                    <ul class="selection selectionB">
                     </ul>
-                    <div class="selecting"></div>
+                    <div class="selecting selectingB"></div>
                 </div>
             </div>
 
             <div class="step-bg stepC-bg">
                 <div class="step stepC">
                     <div class="label labelC">
-                        testC
                     </div>
-                    <ul class="selection selectionC">
-                        <li>CCCCC1</li>
-                        <li>CCCCC2</li>
-                        <li>CCCCC3</li>
-                    </ul>
-                    <div class="selecting"></div>
+                    <div class="solution hidden">
+                        <div class="description"><div class="description-wrapper"></div></div>
+                        <ul class="samples">
+                        </ul>
+                        <ul class="links">
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <script src="js/global.js"></script>
-        <script src="js/controller/configFetchController.js"></script>
+
+        <script src="js/view/selectingView.js"></script>
+        <script src="js/view/configView.js"></script>
+        <script src="js/view/genreView.js"></script>
+        <script src="js/view/todoView.js"></script>
+        <script src="js/view/solutionView.js"></script>
+        <script src="js/view/resetView.js"></script>
+
+        <script src="js/module/stepModule.js"></script>
+        <script src="js/module/fetchConfigModule.js"></script>
+        <script src="js/module/fetchGenreModule.js"></script>
+        <script src="js/module/fetchTodoModule.js"></script>
+        <script src="js/module/fetchSolutionModule.js"></script>
+        <script src="js/module/resetModule.js"></script>
+
+        <script src="js/controller/fetchConfigController.js"></script>
+        <script src="js/controller/fetchGenreController.js"></script>
+        <script src="js/controller/fetchTodoController.js"></script>
+        <script src="js/controller/fetchSolutionController.js"></script>
+        <script>
+            ResetModule.allReset();
+        </script>
     </body>
 </html>
