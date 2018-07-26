@@ -4,7 +4,10 @@ class fetchTodoModule {
         fetch(host+":"+port+apiPrefix+todoEndpoint+"?genreId="+this.dataset.genreId).then(function (response) {
             return response.json();
         }).then(function (todo) {
-            console.log(todo);
+            TodoView.displayAll(todo);
+            StepModule.forward();
+
+            FetchSolutionController.setEventListener();
         })
     }
 }
