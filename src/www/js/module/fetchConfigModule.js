@@ -1,6 +1,6 @@
 class fetchConfigModule{
     getConfig(){
-        fetch(host+":"+port+apiPrefix+configEndpoint).then(function (response) {
+        fetch(subdomain + "." + host+apiPrefix+configEndpoint).then(function (response) {
             return response.json();
         }).then(function (config) {
             ConfigView.displayAll(config);
