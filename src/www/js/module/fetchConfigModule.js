@@ -1,8 +1,9 @@
 class fetchConfigModule{
     getConfig(){
-        fetch(subdomain + "." + host+apiPrefix+configEndpoint).then(function (response) {
+        fetch("https://"+subdomain + "." + host+apiPrefix+configEndpoint).then(function (response) {
             return response.json();
         }).then(function (config) {
+            console.log(config);
             ConfigView.displayAll(config);
         })
     }

@@ -1,5 +1,5 @@
 let subdomain = "how-to-solve";
-let host = "https://marco.plus";
+let host = "marco.plus";
 let apiPrefix = "/api";
 
 let configEndpoint = "/config";

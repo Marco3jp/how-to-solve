@@ -1,6 +1,6 @@
 class fetchGenreModule {
     getGenre() {
-        fetch(subdomain + "." + host + apiPrefix + genreEndpoint).then(function (response) {
+        fetch("https://"+subdomain + "." + host + apiPrefix + genreEndpoint).then(function (response) {
             return response.json();
         }).then(function (genre) {
             GenreView.displayAll(genre);
